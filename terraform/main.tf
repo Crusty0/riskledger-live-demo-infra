@@ -34,10 +34,10 @@ resource "aws_security_group" "pr_demo" {
   }
 
   tags = {
-    Name                         = "riskledger-pr-demo"
-    environment                  = "staging"
-    "riskledger:demo-action"     = "pr"
-    "riskledger:repo"            = "Crusty0/riskledger-live-demo-infra"
+    Name                     = "riskledger-pr-demo"
+    environment              = "staging"
+    "riskledger:demo-action" = "pr"
+    "riskledger:repo"        = "Crusty0/riskledger-live-demo-infra"
   }
 }
 
