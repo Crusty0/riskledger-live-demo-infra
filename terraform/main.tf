@@ -25,14 +25,6 @@ resource "aws_security_group" "pr_demo" {
   description = "Disposable unattached security group for RiskLedger PR demo"
   vpc_id      = data.aws_vpc.default.id
 
-  ingress {
-    description = "Intentional open SSH rule for RiskLedger live demo"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
   tags = {
     Name                     = "riskledger-pr-demo"
     environment              = "staging"
