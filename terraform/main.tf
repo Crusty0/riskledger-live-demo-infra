@@ -36,6 +36,8 @@ resource "aws_security_group" "pr_demo" {
   tags = {
     Name                     = "riskledger-pr-demo"
     environment              = "staging"
+    criticality              = "low"
+    owner                    = "riskledger-demo"
     "riskledger:demo-action" = "pr"
     "riskledger:repo"        = "Crusty0/riskledger-live-demo-infra"
   }

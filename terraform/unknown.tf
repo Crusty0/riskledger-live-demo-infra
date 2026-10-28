@@ -18,6 +18,8 @@ resource "aws_security_group" "unknown_demo" {
   tags = {
     Name                     = "riskledger-unknown-demo"
     environment              = "staging"
+    criticality              = "low"
+    owner                    = "riskledger-demo"
     "riskledger:demo-action" = "unknown"
     "riskledger:repo"        = "Crusty0/riskledger-live-demo-infra"
   }
